@@ -6,7 +6,7 @@ On Error Resume Next
 'Parameters: FileName
 'Output:
 'How to use: Call ExportDataFromTable(FileName)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India ï¿½ Automation Team (Deepshikha Khater)
 'Creation Date: 5-04-2019
 'Last Updated: 11-04-2019
 
@@ -59,7 +59,7 @@ End Function
 'Parameters: 
 'Output:
 'How to use: Call Capture_StatusBarMessage()
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India ï¿½ Automation Team (Deepshikha Khater)
 'Creation Date: 5-04-2019
 'Last Updated: 5-04-2019
 
@@ -140,7 +140,7 @@ End Function
 'Parameters: file_path
 'Output: Last Created Account Number
 'How to use: Call get_AccountNumber(file_path)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India ï¿½ Automation Team (Deepshikha Khater)
 'Creation Date: 12-04-2019
 'Last Updated: 15-04-2019
 '##################################################################################################
@@ -165,7 +165,7 @@ End Function
 'Parameters: str
 'Output: 
 'How to use: Call inc_No(str)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India ï¿½ Automation Team (Deepshikha Khater)
 'Creation Date: 12-04-2019
 'Last Updated: 12-04-2019
 '##################################################################################################
@@ -298,7 +298,7 @@ End Function
 'Parameters: FileName,FileValue1,FileValue2
 'Output:
 'How to use: Call ValidateExportedDataFromTable(FilePath ,FileValue1,FileValue2)
-'Author: PwC India – Automation Team (Payel Saha)
+'Author: PwC India ï¿½ Automation Team (Payel Saha)
 'Creation Date: 6-04-2019
 'Last Updated: 
 '##################################################################################################
@@ -329,7 +329,7 @@ End Function
 'Purpose/Description: This function is used to capture order number in status bar				
 'Output: 
 'How to use: Call StatusBarOrderNoOutValue()
-'Author: PwC India – Automation Team (Sougata)
+'Author: PwC India ï¿½ Automation Team (Sougata)
 'Creation Date: 16-05-2019
 'Last Updated: 16-05-2019
 '##################################################################################################
@@ -359,7 +359,7 @@ End Function
 'Parameters: NameProperty
 'Output:
 'How to use: value = GetValuefromInformation(NameProperty)
-'Author: PwC India – Automation Team (Payel Saha)
+'Author: PwC India ï¿½ Automation Team (Payel Saha)
 'Creation Date: 16-05-2019
 'Last Updated: 
 '##################################################################################################
@@ -373,7 +373,7 @@ End Function
 'Parameters: StatusColor
 'Output: 
 'How to use: ValidateStatusColorInTable(StatusColor)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India ï¿½ Automation Team (Deepshikha Khater)
 'Creation Date: 16-05-2019
 'Last Updated: 16-05-2019
 '##################################################################################################
@@ -489,7 +489,12 @@ Function InitResult()
 		Case "FB50_PARK_GL_DOCUMENT"			col=split("Park_GL_Document,Result,Error_Message,Status_Bar_Message,Result_Path",",")	
 		Case "F-03_CLEAR GL ACCOUNT"			col=split("Result,Error_Message,Status_Bar_Message,Result_Path",",")		
 		Case "FBV0_POST_PARKED_DOC"				col=split("Result,Error_Message,Status_Bar_Message,Result_Path",",")	
-		Case "MIRO_CREATEINVOICE"				col=split("Invoice_Document_Number")		
+		Case "MIRO_CREATEINVOICE"				col=split("Invoice_Document_Number")
+		Case "MM01_CREATE NEW MATERIAL" 		col=split("MaterialNo,Result,Error_Message,Status_Bar_Message,Result_Path",",")
+		Case "MM01_CREATE NEW EXTEND MATERIAL" 	col=split("MaterialNoExtend,Result,Error_Message,Status_Bar_Message,Result_Path",",")		
+		Case "MIGO_561 GOODS RECEIPT_M1" 		col=split("MaterialDocumentNo,Result,Error_Message,Status_Bar_Message,Result_Path",",")		
+		Case "ME21N_CREATE STO ORDER" 			col=split("StockOrderNo,Result,Error_Message,Status_Bar_Message,Result_Path",",")		
+		Case "VL10B_CREATE A OUTBOUND DELIVERY" col=split("OutboundDeliveryNo,Result,Error_Message,Status_Bar_Message,Result_Path",",")		
 	End Select
 	strsheet=Datatable.GetSheet("Result").Name
 	If Err.Number<>0 Then
@@ -547,6 +552,11 @@ Function UpdateResult(status,outputValue,statusMessage)
 		Case "CS01_Create_Bill_Of_Material" 	DataTable.Value("MaterialNo","Result")=outputValue
 		Case "FB50_POST_GL_DOCUMENT"			DataTable.Value("Post_GL_Document","Result")=outputValue
 		Case "FB50_PARK_GL_DOCUMENT"			DataTable.Value("Park_GL_Document","Result")=outputValue
+		Case "MM01_CREATE NEW MATERIAL"			DataTable.Value("MaterialNo","Result")=outputValue
+		Case "MM01_CREATE NEW EXTEND MATERIAL"	DataTable.Value("MaterialNoExtend","Result")=outputValue
+		Case "MIGO_561 GOODS RECEIPT_M1"		DataTable.Value("MaterialDocumentNo","Result")=outputValue
+		Case "ME21N_CREATE STO ORDER"			DataTable.Value("StockOrderNo","Result")=outputValue
+		Case "VL10B_CREATE A OUTBOUND DELIVERY" DataTable.Value("OutboundDeliveryNo","Result")=outputValue
 		Case "MIRO_CREATEINVOICE"				DataTable.Value("Invoice_Document_Number","Result")=outputValue
 	End Select
 	If status="Fail" Then
