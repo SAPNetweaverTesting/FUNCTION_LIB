@@ -6,7 +6,7 @@ On Error Resume Next
 'Parameters: FileName
 'Output:
 'How to use: Call ExportDataFromTable(FileName)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India â€“ Automation Team (Deepshikha Khater)
 'Creation Date: 5-04-2019
 'Last Updated: 11-04-2019
 
@@ -59,7 +59,7 @@ End Function
 'Parameters: 
 'Output:
 'How to use: Call Capture_StatusBarMessage()
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India â€“ Automation Team (Deepshikha Khater)
 'Creation Date: 5-04-2019
 'Last Updated: 5-04-2019
 
@@ -140,7 +140,7 @@ End Function
 'Parameters: file_path
 'Output: Last Created Account Number
 'How to use: Call get_AccountNumber(file_path)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India â€“ Automation Team (Deepshikha Khater)
 'Creation Date: 12-04-2019
 'Last Updated: 15-04-2019
 '##################################################################################################
@@ -165,7 +165,7 @@ End Function
 'Parameters: str
 'Output: 
 'How to use: Call inc_No(str)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India â€“ Automation Team (Deepshikha Khater)
 'Creation Date: 12-04-2019
 'Last Updated: 12-04-2019
 '##################################################################################################
@@ -298,7 +298,7 @@ End Function
 'Parameters: FileName,FileValue1,FileValue2
 'Output:
 'How to use: Call ValidateExportedDataFromTable(FilePath ,FileValue1,FileValue2)
-'Author: PwC India – Automation Team (Payel Saha)
+'Author: PwC India â€“ Automation Team (Payel Saha)
 'Creation Date: 6-04-2019
 'Last Updated: 
 '##################################################################################################
@@ -329,7 +329,7 @@ End Function
 'Purpose/Description: This function is used to capture order number in status bar				
 'Output: 
 'How to use: Call StatusBarOrderNoOutValue()
-'Author: PwC India – Automation Team (Sougata)
+'Author: PwC India â€“ Automation Team (Sougata)
 'Creation Date: 16-05-2019
 'Last Updated: 16-05-2019
 '##################################################################################################
@@ -359,7 +359,7 @@ End Function
 'Parameters: NameProperty
 'Output:
 'How to use: value = GetValuefromInformation(NameProperty)
-'Author: PwC India – Automation Team (Payel Saha)
+'Author: PwC India â€“ Automation Team (Payel Saha)
 'Creation Date: 16-05-2019
 'Last Updated: 
 '##################################################################################################
@@ -373,7 +373,7 @@ End Function
 'Parameters: StatusColor
 'Output: 
 'How to use: ValidateStatusColorInTable(StatusColor)
-'Author: PwC India – Automation Team (Deepshikha Khater)
+'Author: PwC India â€“ Automation Team (Deepshikha Khater)
 'Creation Date: 16-05-2019
 'Last Updated: 16-05-2019
 '##################################################################################################
@@ -570,3 +570,4 @@ SAPGuiSession("Session_2").SAPGuiWindow("Information").SAPGuiButton("Continue   
 End If
 Next
 End Function
+'''
