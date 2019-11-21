@@ -558,6 +558,7 @@ Function UpdateResult(status,outputValue,statusMessage)
 		Case "ME21N_CREATE STO ORDER"			DataTable.Value("StockOrderNo","Result")=outputValue
 		Case "VL10B_CREATE A OUTBOUND DELIVERY" DataTable.Value("OutboundDeliveryNo","Result")=outputValue
 		Case "MIRO_CREATEINVOICE"				DataTable.Value("Invoice_Document_Number","Result")=outputValue
+
 	End Select
 	If status="Fail" Then
 		SnapShotPath = Environment.Value("ResultDir") & "\" & Environment.Value("ActionName") & "_"& Environment.Value("CurrentIteration") & ".png"
